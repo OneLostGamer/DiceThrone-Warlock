@@ -1,0 +1,613 @@
+{
+	"character": {
+  "name": "Warlock",
+  "short_name": "Warlock",
+  "quote": ["Power is borrowed... but fear is earned."],
+  "version": 1
+	},
+	
+	"dice": {
+		"symbols": ["Dagger", "Eye", "Tome", "Sigil"],
+		"symbol_images": ["Dagger.png", "Eye.png", "Tome.png", "Sigil.png"],
+		"codes": ["1", "2", "3", "4"],
+		"shift": [true, true, true, true],
+		"dice_colour": [50, 0, 100],
+		"arrangement": [1, 1, 1, 2, 3, 4]
+	},
+	
+	"status_effects": [
+		{
+			"name": "Pact of the Fiend",
+			"code": "Pact of the Fiend",
+			"image": "Blank.png",
+			"type": 4,
+			"colour": [255, 0, 0],
+			"stack_limit": 1,
+			"text": ["During your Roll Phase Roll 1  /icon die :", 
+				"/light (offensive or defensive) /light",
+				"1–3: Deal /icon undefdamage-1  dmg",
+				"4–5: Reroll up to 1 of your dice.",
+				"6: Inflict Hex on the opponent.",
+				"/light This token may not be transferred or removed by any means /light"],
+			"stock": 1 
+		},
+		{
+			"name": "Pact of the Blade",
+			"code": "Pact of the Blade",
+			"image": "Blank.png",
+			"type": 4,
+			"colour": [122, 35, 35],
+			"stack_limit": 1,
+			"text": ["Add +1 Damage to an attack.",
+				"If the attack was Undefendable, inflict Hex.",
+				"/light This token may not be transferred or removed by any means /light",],
+			"stock": 1
+		},
+		{
+			"name": "",
+			"code": "The Great Old One",
+			"image": "Blank.png",
+			"type": 4,
+			"colour": [122, 50, 0],
+			"stack_limit": 1,
+			  "text": ["During your Income Phase, roll 5 /icon die :",
+			"3 or more dice with the same symbol, Choose one:",
+			"Gain 2 /icon cp-2",
+			"Discard /icon draw-1 , then draw /icon draw-1 card.",
+			"3 or more dice with the same value:",
+			"During your next defensive roll phase your",
+			"opponent rolls their Defensive ability instead.",
+			"You recieve the resulting effects.",
+			"Exactly 2 pairs:",
+			"Force all players to reroll their entire offensive roll",
+			"after completing it.",
+			"/light This token may not be transferred or removed by any means /light"],
+			"stock": 1
+		},
+		{
+			"name": "Hex",
+			"code": "Hex",
+			"image": "Blank.png",
+			"type": 1,
+			"colour": [38, 44, 47],
+			"stack_limit": 1,
+			  "text": ["6’s are considered blanks:",
+			"Whenever a player afflicted with this token",
+			"rolls a 6, it’s as if their die has been altered to",
+			"a blank die face that has no value.",
+			"At the conclusion of their turn, remove this token.",
+			"This token may not be transferred or removed by any means",
+			"/light (but can be removed). /light"],
+			"stock": 1
+		}
+	],
+	
+	"leaflet": {
+		"image": "WarlockLeaflet.png",
+		"bar_colour": [0, 0, 0],
+		"setup": ["Start the game", "Choosing one 'Pact'", "for the reminder", "of the game."],
+		"compact": false
+	},
+	
+	"information": {
+		"image": "WarlockLeaflet.png",
+		"fade": [5, 5, 5],
+		"complexity": 4,
+		"name": ["Warlock"],
+		"faq": [
+			{
+				"question": "question?",
+				"answer": "Answer!"
+			},
+			{
+				"question": ["Question 2", "second line"],
+				"answer":["Another answer", "(...with another line)"]
+			}
+		],
+		"text": ["you can also use this instead of the faq..."],
+		"weapon": "Weapon here",
+		"bio": ["backstory"],
+		"credits": ["Homebrew made by this guy", "Art by... other people"]
+	},
+	
+	"cards": [
+		{
+			"name": "TRANSFERENCE!",
+			"type": 4,
+			"cost": 2,
+			"text": ["Transfer 1 status effect token", "from a chosen player to", "another chosen player."],
+			"image": "transferance.png"
+		},
+		{
+			"name": "WHAT STATUS EFFECTS?",
+			"type": 4,
+			"cost": 2,
+			"text": ["Remove all status effect tokens", "from a chosen player."],
+			"image": "what_status_effects.png"
+		},
+		{
+			"name": "VEGAS BABY!",
+			"type": 4,
+			"cost": 0,
+			"text-2": ["Roll 1 /icon die :", "Gain /icon ½ the value as  /icon cp", "/light (rounded up) /light"],
+			"text": ["Roll 1 /icon die :", "Gain ½ the value as /icon cp", "/light (rounded up) /light"],
+			"image": "vegas_baby.png"
+		},
+		{
+			"name": "GET THAT OUTTA HERE!",
+			"type": 4,
+			"cost": 1,
+			"text": ["Remove a status effect", "token from a chosen player."],
+			"image": "get_that_outta_here.png"
+		},
+		
+		{
+			"name": "TRIPLE UP!",
+			"type": 1,
+			"cost": 2,
+			"text": "Draw /icon draw-3 .",
+			"image": "triple_up.png"
+		},
+		{
+			"name": "DOUBLE UP!",
+			"type": 1,
+			"cost": 1,
+			"text": "Draw /icon draw-2 .",
+			"image": "double_up.png"
+		},
+		{
+			"name": "BUH, BYE!",
+			"type": 1,
+			"cost": 2,
+			"text": ["Remove a status effect token", "from a chosen player."],
+			"image": "buh_bye.png"
+		},
+		{
+			"name": "TIP IT!",
+			"type": 1,
+			"cost": 1,
+			"text": ["Increase or decrease any die by", "the value of 1", "/light (a value of 1 cannot be decreased and", "a value of 6 cannot be increased)."],
+			"image": "tip_it.png"
+		},
+		{
+			"name": "GETTING PAID!",
+			"type": 1,
+			"cost": 0,
+			"text": "Gain  /icon cp-2 .",
+			"image": "getting_paid.png"
+		},
+		
+		{
+			"name": "NOT THIS TIME!",
+			"type": 2,
+			"cost": 1,
+			"text": ["A chosen player prevents /icon block-6", "incoming dmg."],
+			"image": "not_this_time.png"
+		},
+		{
+			"name": "TWICE AS WILD!",
+			"type": 2,
+			"cost": 3,
+			"text": "Change the value of any two dice.",
+			"image": "twice_as_wild.png"
+		},
+		{
+			"name": "TRY, TRY AGAIN!",
+			"type": 2,
+			"cost": 1,
+			"text": ["You or a chosen teammate may", "re-roll up to two dice", "/light (can be the same die twice in a", "row or two different dice)."],
+			"image": "try_try_again.png"
+		},
+		{
+			"name": "SO WILD!",
+			"type": 2,
+			"cost": 2,
+			"text": "Change the value of any one die.",
+			"image": "so_wild.png"
+		},
+		{
+			"name": "SAMESIES!",
+			"type": 2,
+			"cost": 1,
+			"text": ["Change the value of one of your", "dice to be identical to the value", "of another one of your dice", "/light (that was rolled within the same phase", "and for the same purpose)."],
+			"image": "samesies.png"
+		},
+		{
+			"name": "ONE MORE TIME!",
+			"type": 2,
+			"cost": 1,
+			"text": ["A chosen player may perform an", "additional /italics  Roll Attempt /italics", "of up to five dice during their", "/italics Offensive Roll Phase."],
+			"image": "one_more_time.png"
+		},
+		{
+			"name": "HELPING HAND!",
+			"type": 2,
+			"cost": 1,
+			"text": ["Select one of your", "opponent's dice and force", "them to re-roll it."],
+			"image": "helping_hand.png"
+		},
+		{
+			"name": "BETTER D!",
+			"type": 2,
+			"cost": 0,
+			"text": ["A chosen player may perform an", "additional /italics  Roll Attempt /italics  of up to five", "dice during their /italics  Defensive Roll Phase."],
+			"image": "better_d.png"
+		},
+		{
+			"name": "SIX IT!",
+			"type": 2,
+			"cost": 1,
+			"text": ["Change the value of", "one of your dice to a 6."],
+			"image": "six_it.png"
+		},
+		
+		
+		
+		
+		
+
+		{
+			"name": "Soul Burn II",
+			"type": 3,
+			"cost": 3,
+			"ability": [{
+			"name": "Soul Burn II",
+			"type": 3,
+			"face": 1,
+			"move": [
+      {
+			"length": 3,
+			"text": "Deal  /icon damage-5 dmg."
+      },
+      {
+			"length": 4,
+			"text": "Deal  /icon damage-6 dmg."
+      },
+      {
+			"length": 5,
+			"text": "Deal  /icon damage-7 dmg."
+      }
+    ],
+			"text": ["",
+			"If your opponent is afflicted with Hex,",
+			"heal x /icon heal-1  for each  /icon 1  used in this roll."]
+		}]
+	},
+	
+		{
+			"name": "Soul Burn III",
+			"type": 3,
+			"cost": 4,
+			"ability": [{
+			"name": "Soul Burn III",
+			"type": 3,
+			"face": 1,
+			"move": [
+      {
+			"length": 3,
+			"text": "Deal  /icon damage-6 dmg."
+      },
+      {
+			"length": 4,
+			"text": "Deal  /icon damage-7 dmg."
+      },
+      {
+			"length": 5,
+			"text": "Deal  /icon damage-8 dmg."
+      }
+    ],
+			"text": ["",
+			"If your opponent is afflicted with Hex,",
+			"heal x /icon heal-2  for each  /icon 1  used in this roll."]
+		}]
+	},	
+		{
+			"name": "Fiendish Resilience II",
+			"type": 3,
+			"cost": 3,
+			"ability": [{
+				"name": "Fiendish Resilience II",
+				"type": 0,
+				"layout": [1, 1, 2, 2],
+				"text": [
+					"Deal  /icon damage-7 dmg.",
+					"Deal  /icon undefdamage-3 dmg to",
+					"a different opponent.",
+					"Heal  /icon heal-2",
+					"If the primary target is",
+					"afflicted with Hex, Heal  /icon heal-5  instead."
+				]
+			}]
+		},
+
+		{
+			"name": "Dark Bargain II",
+			"type": 3,
+			"cost": 2,
+			"ability": [{
+				"name": "Dark Bargain II",
+				"type": 0,
+				"layout": [1, 2, 3, 4],
+				"text": [
+					"Roll 3 /icon die ",
+					"If your opponent is afflicted with",
+					"Hex roll 4 /icon die instead.",
+					"For each  /icon 1  deal /icon undefdamage-3 dmg.",
+					"For each  /icon 2  gain /icon draw-1 card.",
+					"For each  /icon 3  your opponent",
+					"discards /icon draw-1 card.",
+					"For each  /icon 4  gain  /icon cp-2."
+				]
+			}]
+		},
+
+		{
+				"name": "Hellish Rebuke II",
+				"type": 3,
+				"cost": 3,
+				"ability": [{
+				"name": "Hellish Rebuke II",
+				"type": 2,
+				"length": 3,
+				"text": [
+					"Choose an opponent.",
+					"Roll 3 /icon die .",
+					"Deal /icon undefdamage-2 dmg x /icon 1",
+					"On /icon 4 inflict Hex.",
+					"If they are already Hexed,", "gain /icon draw-1 card."
+				]
+			}]
+		},
+		
+		{
+				"name": "Hellish Rebuke III",
+				"type": 3,
+				"cost": 4,
+				"ability": [{
+				"name": "Hellish Rebuke III",
+				"type": 2,
+				"length": 3,
+				"text": [
+					"Choose an opponent.",
+					"Roll 4 /icon die .",
+					"Deal /icon undefdamage-2 dmg x /icon 1",
+					"On /icon 4 inflict Hex.",
+					"If they are already Hexed,", "gain /icon draw-1 card."
+				]
+			}]
+		},		
+		{
+			"name": "Arms of Hadar II / Suggestion II",
+			"type": 3,
+			"cost": 2,
+			"ability": [
+				{
+					"name": "Arms of Hadar II",
+					"type": 1,
+					"length": 4,
+					"text": [
+						"Deal /icon damage-7 dmg.",
+						"Inflict Hex.",
+						"Then heal /icon heal-1 ."
+					]
+				},
+				{
+					"name": "Suggestion II",
+					"type": 0,
+					"layout": [2, 3, 4],
+					"text": [
+						"Your opponent discards /icon draw-2 cards.",
+						"Or receives /icon undefdamage-5 dmg and gains Hex.",
+						""
+					]
+				}
+			]
+		},
+
+		{
+			"name": "Dispel Magic II",
+			"type": 3,
+			"cost": 3,
+			"ability": [{
+				"name": "Dispel Magic II",
+				"type": 0,
+				"layout": [3, 3, 3],
+				"text": ["",
+					"Remove all status effects", "from all players.", "/italics (Including yourself) /italics ",
+					"Then draw /icon draw-1 card.",
+					"If 2 or more effects were removed", "from any one player,",
+					"draw /icon draw-1 additional card."
+				]
+			}]
+		},
+		
+		{
+			"name": "Hunger of Hadar II",
+			"type": 3,
+			"cost": 2,
+			"ability": [{
+				"name": "Hunger of Hadar II",
+				"type": 1,
+				"length": 5,
+				"text": ["",
+					"Deal /icon damage-9 dmg.",
+					"Inflict Hex, then draw /icon draw-1 card.",
+					"If the opponent is already Hexed,",
+					"draw /icon draw-1 additional card and Heal /icon heal-2 ."
+				]
+			}]
+		},
+
+		{
+			"name": "Respec My Role!",
+			"type": 4,
+			"cost": 0,
+			"text": [" ", "Roll 1 /icon die :", "",
+				"On  /icon 4 , Change your  /italics Pact /italics .",
+				" ", "/italics you can not change it again", "for the remainder of the game"],
+			"image": "RespecMyRole!.png",
+			"promo": true
+		},
+		
+		{
+			"name": "Help me my Lord!",
+			"type": 2,
+			"cost": 1,
+			"attack_modifier": true,
+			"text": ["Roll 3 dice", "Add  /icon damage-1 x /icon 1  to the Attack", "",],
+			"image": "HelpMe!.png"
+		},
+		{
+			"name": "Com-Pact!",
+			"type": 4,
+			"cost": 1,
+			"text": ["", "If your pact is the Imp or blade", "Add /icon damage-1 dmg", "this turn."],
+			"image": "Con-pact.png"
+		},
+		
+		{
+			"name": "Hellfire Burst",
+			"type": 2,
+			"cost": 2,
+			"attack_modifier": true,
+			"text": [
+				"Roll 4 dice",
+				"Add /icon damage-2 x /icon 1 to the Attack",
+				"Your attack becomes undefendable", "on a roll of 6",
+				""],
+			"image": "Hellfireburst.png"
+		},
+		{
+			"name": "Hex Swap",
+			"type": 4,
+			"cost": 1,
+			"text": [
+				"Hex an enemy.",
+				"If they are already Hexed,",
+				"remove Hex and gain /icon 2 CP.",
+				""],
+			"image": "HexSwap.png"
+		},
+	],
+	
+	
+	"board": {
+		"abilities": {
+			"1": {
+				"name": "Soul Burn",
+				"type": 3,
+				"face": 1,
+				"move": [
+					{
+						"length": 3,
+						"text": "Deal  /icon damage-4 dmg."
+					},
+					{
+						"length": 4,
+						"text": "Deal  /icon damage-5 dmg."
+					},
+					{
+						"length": 5,
+						"text": "Deal  /icon damage-6 dmg."
+					}],
+				"text": ["If your opponent is afflicted with Hex",
+						"heal x /icon heal-1  for each  /icon 1   used in this roll."]
+			},
+	
+			"2": {
+				"name": "Pact-Bound",
+				"type": 4,
+				"text": ["", "At the start of the game", 
+				"choose one Pact:", 
+				"Fiend, Great Old One, or Hexblade.", 
+				"This choice grants you a unique token", 
+				"and determines your Pact."]
+			},
+			
+			"3": {
+					"name": "Fiendish Resilience",
+					"type": 0,
+					"layout": [1, 1, 2, 2],
+					"text": [
+					"Deal  /icon damage-4 dmg.",
+					"Deal  /icon undefdamage-2 dmg to a different opponent.",
+					"Heal  /icon heal-1",
+					"If the primary target is",
+					"afflicted with Hex, Heal  /icon heal-3  instead."]
+			},
+		
+			"4": {
+				"name": "Dark Bargain",
+				"type": 0,
+				"layout": [1, 2, 3, 4],
+				"text": [
+				"Roll 2 /icon die",
+				"If your opponent is afflicted with hex",
+				"roll 3 /icon die  instead.",
+				"For each  /icon 1   deal /icon undefdamage-2 dmg.",
+				"For each  /icon 2   gain /icon draw-1 card",
+				"For each  /icon 3",  
+				"your opponent discards /icon draw-1 card.",
+				"For each  /icon 4  gain 1 /icon cp-2."]
+			},
+	
+			"5": [
+				{
+					"name": "Arms of Hadar",
+					"type": 1,
+					"length": 4,
+					"text": ["Deal /icon damage-6  dmg",
+					"Inflict hex."]
+				},
+				{
+					"name": "Suggestion",
+					"type": 0,
+					"layout": [2, 3, 4],
+					"text": [
+					"Your opponent discards /icon draw-1 card",
+					"or recieves /icon undefdamage-4  dmg.",
+					""]
+				},
+			],
+		
+			"6": {
+				"name": "Hunger of Hadar",
+				"type": 1,
+				"length": 5,
+				"text": ["Deal /icon damage-8  dmg",
+					"Inflict hex then draw /icon draw-1 card."]
+			},
+		
+			"7": {
+				"name": "Dispel Magic",
+				"type": 0,
+				"layout": [3, 3, 3],
+				"text": ["", "Remove all status effects from all players", "/italics (Including yourself) /italics ",
+				"Then draw /icon draw-1 card."]
+			},
+	
+			"8": {
+				"name": "Hellish Rebuke",
+				"type": 2,
+				"length": 2,
+				"text": ["Choose an opponent.", 
+						"Roll 2 /icon die",
+						"Deal /icon undefdamage-1  dmg x /icon 1",
+						"On  /icon 4  inflict hex."]
+			},
+		
+			"ultimate": {
+				"name": "Apotheosis",
+				"text": ["Deal /icon undefdamage-8 to all opponents",
+					"Inflict Hex to all opponents then heal for each Hex x /icon heal-2 "]
+			}
+		},
+		"background": [100, 100, 100],
+		"border": [55, 35, 10],
+		"image": "WarlockBoardv2.png",
+		"name": true,
+		"quote": true,
+		"health": "Warlockhealth.png",
+		"cp": "WarlockCP.png"
+	}
+}
